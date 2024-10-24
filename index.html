@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pendaftaran Member</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h2>Pendaftaran Member</h2>
+        <form id="memberForm" onsubmit="return validateForm(event)">
+            <div class="form-group">
+                <label for="firstName">Nama Depan</label>
+                <input type="text" id="firstName" name="firstName" placeholder="Masukkan nama depan">
+                <div class="error" id="firstNameError">Nama depan wajib diisi</div>
+            </div>
+
+            <div class="form-group">
+                <label for="lastName">Nama Belakang</label>
+                <input type="text" id="lastName" name="lastName" placeholder="Masukkan nama belakang">
+                <div class="error" id="lastNameError">Nama belakang wajib diisi</div>
+            </div>
+
+            <div class="form-group">
+                <label>Gender</label>
+                <div class="gender-group">
+                    <div class="gender-option">
+                        <input type="radio" id="male" name="gender" value="laki-laki">
+                        <label for="male">Laki-laki</label>
+                    </div>
+                    <div class="gender-option">
+                        <input type="radio" id="female" name="gender" value="perempuan">
+                        <label for="female">Perempuan</label>
+                    </div>
+                </div>
+                <div class="error" id="genderError">Pilih gender Anda</div>
+            </div>
+
+            <div class="form-group">
+                <label for="phone">Nomor Telepon</label>
+                <input type="tel" id="phone" name="phone" placeholder="Contoh: 081234567890">
+                <div class="error" id="phoneError">Format nomor telepon tidak valid</div>
+            </div>
+
+            <div class="form-group">
+                <label for="address">Alamat</label>
+                <textarea id="address" name="address" rows="3" placeholder="Masukkan alamat lengkap"></textarea>
+                <div class="error" id="addressError">Alamat wajib diisi</div>
+            </div>
+
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" placeholder="Contoh: nama@domain.com">
+                <div class="error" id="emailError">Format email tidak valid</div>
+            </div>
+
+            <div class="form-group">
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password" placeholder="Minimal 8 karakter">
+                <div class="error" id="passwordError">Password harus minimal 8 karakter</div>
+            </div>
+
+            <button type="submit">Daftar Member</button>
+        </form>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
